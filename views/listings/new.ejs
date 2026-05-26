@@ -1,4 +1,127 @@
-<!DOCTYPE html>
+<% layout("/layouts/boilerplate") %>
+
+<div class="max-w-xl mx-auto bg-white shadow-lg rounded-xl p-8 mt-8">
+
+<h1 class="text-3xl font-bold text-center mb-6">
+Create New Listing
+</h1>
+
+<form action="/listings" method="POST">
+
+<div class="mb-4">
+
+<label class="block font-medium mb-2">
+Title
+</label>
+
+<input
+type="text"
+name="title"
+placeholder="Enter title"
+class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-400">
+
+</div>
+
+<div class="mb-4">
+
+<label class="block font-medium mb-2">
+Description
+</label>
+
+<textarea
+name="description"
+class="w-full border rounded-lg p-3 h-28 focus:outline-none focus:ring-2 focus:ring-red-400">
+</textarea>
+
+</div>
+
+<div class="mb-4">
+
+<label class="block font-medium mb-2">
+Price
+</label>
+
+<input
+type="number"
+name="price"
+class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-400">
+
+</div>
+
+<div class="mb-4">
+
+<label class="block font-medium mb-2">
+Location
+</label>
+
+<input
+type="text"
+name="location"
+class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-400">
+
+</div>
+
+<div class="mb-6">
+
+<label class="block font-medium mb-2">
+Country
+</label>
+
+<input
+type="text"
+name="country"
+class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-400">
+
+</div>
+
+<button
+class="w-full bg-red-500 text-white py-3 rounded-lg hover:bg-red-600">
+
+Create Listing
+
+</button>
+
+</form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -66,4 +189,11 @@
     </form>
 
 </body>
-</html>
+</html> -->
+
+
+
+
+
+
+

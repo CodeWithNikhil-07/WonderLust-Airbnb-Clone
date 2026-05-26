@@ -8,9 +8,11 @@ const connectDb = require("./db/db");
 const ListingModel = require("./models/listing");
 const path = require("path");
 const methodOverride = require("method-override");
+const ejsMate = require("ejs-mate");
 
 connectDb();
 
+app.engine("ejs",ejsMate);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
