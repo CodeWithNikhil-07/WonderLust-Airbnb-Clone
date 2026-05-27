@@ -30,8 +30,23 @@ Description
 
 <textarea
 name="description"
+placeholder="Enter description"
 class="w-full border rounded-lg p-3 h-28 focus:outline-none focus:ring-2 focus:ring-red-400">
 </textarea>
+
+</div>
+
+<div class="mb-4">
+
+<label class="block font-medium mb-2">
+Image URL
+</label>
+
+<input
+type="text"
+name="image[url]"
+placeholder="Enter image URL"
+class="w-full border rounded-lg p-3">
 
 </div>
 
@@ -44,6 +59,7 @@ Price
 <input
 type="number"
 name="price"
+placeholder="Enter price"
 class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-400">
 
 </div>
@@ -57,6 +73,7 @@ Location
 <input
 type="text"
 name="location"
+placeholder="Enter location"
 class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-400">
 
 </div>
@@ -70,12 +87,13 @@ Country
 <input
 type="text"
 name="country"
+placeholder="Enter country"
 class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-400">
 
 </div>
 
 <button
-class="w-full bg-red-500 text-white py-3 rounded-lg hover:bg-red-600">
+class="w-full bg-red-500 text-white py-3 rounded-lg hover:bg-red-600 transition">
 
 Create Listing
 
@@ -84,116 +102,3 @@ Create Listing
 </form>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create New Listing</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-
-    <h1>Create New Listing</h1>
-
-    <form action="/listings" method="POST">
-
-        <label>Title:</label>
-        <input 
-            type="text" 
-            name="title"
-            placeholder="Enter title" 
-        >
-        <br><br>
-
-        <label>Description:</label>
-        <textarea 
-            name="description"
-            placeholder="Enter description"
-        ></textarea>
-        <br><br>
-
-        <label>Image URL:</label>
-        <input 
-            type="text" 
-            name="image"
-            placeholder="Enter image URL"
-        >
-        <br><br>
-
-        <label>Price:</label>
-        <input 
-            type="number" 
-            name="price"
-            placeholder="Enter price"
-        >
-        <br><br>
-
-        <label>Location:</label>
-        <input 
-            type="text" 
-            name="location"
-            placeholder="Enter location"
-        >
-        <br><br>
-
-        <label>Country:</label>
-        <input 
-            type="text" 
-            name="country"
-            placeholder="Enter country"
-        >
-        <br><br>
-
-        <button type="submit">
-            Add Listing
-        </button>
-
-    </form>
-
-</body>
-</html> -->
-
-
-
-
-
-
-

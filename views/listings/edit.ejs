@@ -39,6 +39,20 @@ class="w-full border rounded-lg p-3 h-28 focus:outline-none focus:ring-2 focus:r
 <div class="mb-4">
 
 <label class="block font-medium mb-2">
+Image URL
+</label>
+
+<input
+type="text"
+name="image[url]"
+value="<%= listing.image.url %>"
+class="w-full border rounded-lg p-3">
+
+</div>
+
+<div class="mb-4">
+
+<label class="block font-medium mb-2">
 Price
 </label>
 
@@ -79,7 +93,7 @@ class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-r
 </div>
 
 <button
-class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600">
+class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition">
 
 Update Listing
 
@@ -88,7 +102,6 @@ Update Listing
 </form>
 
 </div>
-
 
 
 

@@ -13,6 +13,7 @@ const ejsMate = require("ejs-mate");
 connectDb();
 
 app.engine("ejs",ejsMate);
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
@@ -54,7 +55,9 @@ app.put("/listings/:id",async(req,res) => {
     let {id} = req.params;
     await ListingModel.findByIdAndUpdate(
         id,
-        req.body
+        {
+          ...req.body
+        }
     );
     res.redirect(`/listings/${id}`);
 })
