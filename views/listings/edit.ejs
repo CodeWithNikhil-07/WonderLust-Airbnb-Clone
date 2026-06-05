@@ -19,6 +19,9 @@ Title
 <input
 type="text"
 name="title"
+required
+minlength="3"
+maxlength="50"
 value="<%= listing.title %>"
 class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-400">
 
@@ -32,6 +35,8 @@ Description
 
 <textarea
 name="description"
+required
+minlength="10"
 class="w-full border rounded-lg p-3 h-28 focus:outline-none focus:ring-2 focus:ring-red-400"><%= listing.description %></textarea>
 
 </div>
@@ -43,10 +48,11 @@ Image URL
 </label>
 
 <input
-type="text"
+type="url"
 name="image[url]"
-value="<%= listing.image.url %>"
-class="w-full border rounded-lg p-3">
+value="<%= listing.image?.url %>"
+placeholder="https://images.unsplash.com/..."
+class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-400">
 
 </div>
 
@@ -59,6 +65,8 @@ Price
 <input
 type="number"
 name="price"
+required
+min="1"
 value="<%= listing.price %>"
 class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-400">
 
@@ -73,6 +81,8 @@ Location
 <input
 type="text"
 name="location"
+required
+minlength="2"
 value="<%= listing.location %>"
 class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-400">
 
@@ -87,6 +97,8 @@ Country
 <input
 type="text"
 name="country"
+required
+minlength="2"
 value="<%= listing.country %>"
 class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-400">
 
@@ -102,31 +114,3 @@ Update Listing
 </form>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
