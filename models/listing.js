@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 const listingSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: true
+        required: true,
+        minlength : 3
     },
 
     description: String,
@@ -19,7 +20,11 @@ const listingSchema = new mongoose.Schema({
         }
     },
 
-    price: Number,
+    price: {
+        type : Number,
+        required : true,
+        Min : 1
+    },
     location: String,
     country: String
 });
