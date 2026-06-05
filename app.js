@@ -9,6 +9,7 @@ const ListingModel = require("./models/listing");
 const path = require("path");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
+const ExpressError = require("./utils/ExpressError");
 
 connectDb();
 
@@ -110,6 +111,18 @@ app.delete("/listings/:id",async (req,res) => {
     console.log(deletedListing);
     res.redirect("/listings");
 })
+
+app.all("*",(req,res,next)=>{
+    next(new ExpressError(404,"Page Not Found"));
+
+});
+
+// ERROR HANDLING MIDDLEWARE
+app.use((err,req,res,next)=>{
+    let {statusCode = 500,message = "Something Went Wrong"} = err;
+    console.log(err);
+    res.status(statusCode).send(message);
+});
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
