@@ -6,7 +6,7 @@
 Create New Listing
 </h1>
 
-<form action="/listings" method="POST">
+<form action="/listings" method="POST" novalidate>
 
 <div class="mb-4">
 
@@ -17,11 +17,14 @@ Title
 <input
 type="text"
 name="title"
-placeholder="Enter title"
 required
+minlength="3"
+maxlength="50"
 class="peer w-full border rounded-lg p-3">
 
-<p class="hidden peer-invalid:block text-red-500 text-sm mt-1">    Title is required
+<p class="hidden peer-invalid:block text-red-500 text-sm mt-1">
+Title must be between 3 and 50 characters.
+</p>
 
 </div>
 
@@ -33,10 +36,14 @@ Description
 
 <textarea
 name="description"
-placeholder="Enter description"
 required
-class="w-full border rounded-lg p-3 h-28 focus:outline-none focus:ring-2 focus:ring-red-400">
+minlength="10"
+class="peer w-full border rounded-lg p-3 h-28">
 </textarea>
+
+<p class="hidden peer-invalid:block text-red-500 text-sm mt-1">
+Description must contain at least 10 characters.
+</p>
 
 </div>
 
@@ -47,11 +54,13 @@ Image URL
 </label>
 
 <input
-type="text"
+type="url"
 name="image[url]"
-placeholder="Enter image URL"
-class="w-full border rounded-lg p-3">
+class="peer w-full border rounded-lg p-3">
 
+<p class="hidden peer-invalid:block text-red-500 text-sm mt-1">
+Please enter a valid image URL.
+</p>
 </div>
 
 <div class="mb-4">
@@ -63,10 +72,13 @@ Price
 <input
 type="number"
 name="price"
-placeholder="Enter price"
 required
-class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-400">
+min="1"
+class="w-full border rounded-lg p-3">
 
+<p class="hidden peer-invalid:block text-red-500 text-sm mt-1">
+Price must be greater than 0.
+</p>
 </div>
 
 <div class="mb-4">
@@ -78,9 +90,13 @@ Location
 <input
 type="text"
 name="location"
-placeholder="Enter location"
 required
-class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-400">
+minlength="2"
+class="peer w-full border rounded-lg p-3">
+
+<p class="hidden peer-invalid:block text-red-500 text-sm mt-1">
+Location is required.
+</p>
 
 </div>
 
@@ -93,9 +109,13 @@ Country
 <input
 type="text"
 name="country"
-placeholder="Enter country"
 required
-class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-red-400">
+minlength="2"
+class="peer w-full border rounded-lg p-3">
+
+<p class="hidden peer-invalid:block text-red-500 text-sm mt-1">
+Country is required.
+</p>
 
 </div>
 
