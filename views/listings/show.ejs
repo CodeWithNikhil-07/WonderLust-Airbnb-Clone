@@ -1,106 +1,66 @@
 <% layout("/layouts/boilerplate") %>
 
-<div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden mt-8">
+    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden mt-8">
 
-<img
-src="<%= listing.image.url %>"
-class="w-full h-96 object-cover">
+        <img src="<%= listing.image?.url || 'https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b' %>"
+            class="w-full h-96 object-cover">
 
-<div class="p-8">
+        <div class="p-8">
 
-<h1 class="text-4xl font-bold mb-5">
+            <h1 class="text-4xl font-bold mb-5">
 
-<%= listing.title %>
+                <%= listing.title %>
 
-</h1>
+            </h1>
 
-<p class="text-gray-700 text-lg mb-5">
+            <p class="text-gray-700 text-lg mb-5">
 
-<%= listing.description %>
+                <%= listing.description %>
 
-</p>
+            </p>
 
-<p class="text-2xl font-bold mb-3">
+            <p class="text-2xl font-bold mb-3">
 
-₹ <%= listing.price.toLocaleString("en-IN") %>
+                ₹ <%= listing.price.toLocaleString("en-IN") %>
 
-</p>
+            </p>
 
-<p class="text-gray-600 mb-2">
+            <p class="text-gray-600 mb-2">
 
-📍 <%= listing.location %>
+                📍 <%= listing.location %>
 
-</p>
+            </p>
 
-<p class="text-gray-600 mb-6">
+            <p class="text-gray-600 mb-6">
 
-🌎 <%= listing.country %>
+                🌎 <%= listing.country %>
 
-</p>
+            </p>
 
-<div class="flex gap-4">
+            <div class="flex gap-4">
 
-<a href="/listings/<%= listing._id %>/edit">
+                <a href="/listings/<%= listing._id %>/edit">
 
-<button
-class="bg-blue-500 text-white px-5 py-3 rounded-lg hover:bg-blue-600 transition">
+                    <button class="bg-blue-500 text-white px-5 py-3 rounded-lg hover:bg-blue-600 transition">
 
-Edit Listing
+                        Edit Listing
 
-</button>
+                    </button>
 
-</a>
+                </a>
 
-<form
-action="/listings/<%= listing._id %>?_method=DELETE"
-method="POST">
+                <form action="/listings/<%= listing._id %>?_method=DELETE" method="POST">
 
-<button
-class="bg-red-500 text-white px-5 py-3 rounded-lg hover:bg-red-600 transition">
+                    <button class="bg-red-500 text-white px-5 py-3 rounded-lg hover:bg-red-600 transition">
 
-Delete Listing
+                        Delete Listing
 
-</button>
+                    </button>
 
-</form>
+                </form>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>
