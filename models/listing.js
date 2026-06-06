@@ -4,7 +4,7 @@ const listingSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
-        minlength : 3
+        minlength: 3
     },
 
     description: String,
@@ -21,11 +21,14 @@ const listingSchema = new mongoose.Schema({
     },
 
     price: {
-        type : Number,
-        required : true,
-        Min : 1
+        type: Number,
+        required: true,
+        Min: 1
     },
-    location: String,
+    location: {
+        type: String,
+        required: true
+    },
     country: String
 });
 
