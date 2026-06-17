@@ -22,7 +22,7 @@ A full-stack Airbnb-inspired web application built using MERN technologies.
 
 ## Future Features
 
-- Delete listings
+- Delete listing
 - Authentication
 - Image upload with Cloudinary
 - Reviews and ratings
